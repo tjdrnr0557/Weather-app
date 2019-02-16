@@ -35,5 +35,4 @@
 [Chrome Extension Program Momentum Shortcuts](https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca)
 
 ---
-## 실행화면(LaunchScene)
-![LaunchScene](./momentom.png)
+
