@@ -30,7 +30,7 @@ span{
 .weather{
   font-family: 'Ubuntu', sans-serif;
   float: left;
-  margin-top: 23%;
+  margin-top: 25%;
   margin-left: 1%;
 }
 
@@ -46,7 +46,7 @@ span{
   font-family: 'Ubuntu', sans-serif;
   color: aliceblue;
   font-size: 8em;
-  margin-top: 300px;
+  margin-top: 40%;
   margin-left: 100px;
 
 }
