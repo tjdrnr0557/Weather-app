@@ -1,5 +1,6 @@
 body {
   background-color: #95a5a6;
+  overflow-x: hidden;
 }
 
 h1{
@@ -29,8 +30,8 @@ span{
 .weather{
   font-family: 'Ubuntu', sans-serif;
   float: left;
-  margin-top: 150px;
-  position: relative;
+  margin-top: 23%;
+  margin-left: 1%;
 }
 
 .todolist{
@@ -47,7 +48,6 @@ span{
   font-size: 8em;
   margin-top: 300px;
   margin-left: 100px;
-  position: relative;
 
 }
 
@@ -57,6 +57,9 @@ span{
   font-size: 5em;
   display: none;
   color: aliceblue;
+  text-align: center;
+  /* margin-left: 50px; */
+
 }
 .grettings {
   font-family: 'Ubuntu', sans-serif;
@@ -64,13 +67,17 @@ span{
   font-size: 5em;
   display: none;
   color: aliceblue;
+  text-align: center;
+  margin-left: 0px;
+
+
 }
 
 .showing {
   font-family: 'Ubuntu', sans-serif;
   display: block;
-  font-size: 3em;
-  margin-left: 250px;
+  font-size: 5em;
+  margin-left: 150px;
   
 }
 
@@ -86,6 +93,7 @@ span{
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -117,7 +125,7 @@ textarea.question {
   border-radius: 2px;
   margin: 0;
   border: none;
-  width: 80%;
+  width: 50%;
   background: rgba(0, 0, 0, 0);
   transition: padding-top 0.2s ease, margin-top 0.2s ease;
   overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
@@ -131,7 +139,7 @@ textarea.question + label {
   white-space: nowrap;
   padding: 0;
   margin: 0;
-  width: 10%;
+  width: 25%;
   border-top: 1px solid white;
   -webkit-transition: width 0.4s ease;
   transition: width 0.4s ease;
@@ -196,7 +204,7 @@ input[type="submit"] {
   transition: opacity 0.2s ease, background 0.2s ease;
   display: block;
   opacity: 0;
-  margin: 10px 0 0 0;
+  /* margin: 10px 0 0 0; */
   padding: 10px;
   cursor: pointer;
 }
