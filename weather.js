@@ -1,0 +1,62 @@
+const COORDS = 'coords';
+const API_KEY = "5e2482a62e359747e39c5c655c69cb9c";
+
+const weather = document.querySelector(".js-weather");
+
+// appid=API_KEY를 꼭 넣어야 한다. units=metric => Celsius로 온도를 변경해준다.
+function getWeather(lat, lng) {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`)
+        .then(function (response) {
+            return (response.json());
+        }).then(function (json) {
+            const tmp = json.main.temp;
+            const place = json.name;
+            const todayWeather = json.weather[0].description;
+            weather.innerText = `기온 : ${tmp} °C \n 장소 : ${place} \n 상태 : ${todayWeather}`;
+        });
+};
+
+
+function saveCoords(coordsObj) {
+    localStorage.setItem(COORDS, JSON.stringify(coordsObj));
+}
+
+function handleGeoSuccess(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    const coordsObj = {
+        latitude,
+        longitude
+    };
+    saveCoords(coordsObj);
+    getWeather(latitude, longitude);
+}
+
+function handleGeoError(position) {
+    console.log("where are u?");
+}
+
+
+function askForCoords() {
+    navigator.geolocation.getCurrentPosition(handleGeoSuccess, handleGeoError);
+
+}
+
+function loadCoords() {
+    const loadCoords = localStorage.getItem(COORDS);
+    if (loadCoords === null) {
+        askForCoords();
+    } else {
+        const parseCoords = JSON.parse(loadCoords);
+        getWeather(parseCoords.latitude, parseCoords.longitude);
+    }
+}
+
+
+
+
+function init() {
+    loadCoords();
+}
+
+init();

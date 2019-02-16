@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Something</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="js-clock">
+        <h1 class="clock">00:00</h1>
+      </div>
+      <div class="col-md-12">
+        <div class="weather">
+          <span class="js-weather"></span>
+        </div>
+      </div>
+      <form class="js-form form">
+        <input type="text" placeholder="What is your Name?" />
+      </form>
+      <h4 class="js-grettings grettings"></h4>
+    </div>
+    <div class="col-md-6">
+
+      <div class="todolist">
+        <form class="js-toDoForm">
+          <input type="text" name="name" class="question" id="nme" required autocomplete="off" />
+          <label for="nme"><span>Today?</span></label>
+        </form>
+      </div>
+      <ul class="js-toDoList">
+      </ul>
+
+    </div>
+  </div>
+  <script src="clock.js"></script>
+  <script src="gretting.js"></script>
+  <script src="todo.js"></script>
+  <script src="bg.js"></script>
+  <script src="weather.js"></script>
+
+</body>
+
+</html>
