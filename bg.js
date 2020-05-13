@@ -2,7 +2,7 @@ const body = document.querySelector("body");
 const IMG_NUMBER = 12;
 const title = document.querySelector("title");
 title.innerText = "뭐하지...";
-
+const btn=document.querySelector(".btn");
 
 function paintImage(imgNumber) {
     const image = new Image();
@@ -21,6 +21,7 @@ function genRandom() {
 function init() {
     const randomNumber = genRandom();
     paintImage(randomNumber);
+    console.log("sibal",btn);
 }
 
 init();

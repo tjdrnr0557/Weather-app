@@ -1,7 +1,22 @@
-// const form = document.querySelector(".js-form"),
-//     input = form.querySelector("input"),
-//     gretting = document.querySelector(".js-grettings");
+const form = document.querySelector(".js-form"),
+    input = form.querySelector("input"),
+    gretting = document.querySelector(".btn");
+    
+const bodyy=doucment.querySelector("body");
+console.log(bodyy);
 
+  function init() {
+      if(greeting)
+      {
+          console.log("true");
+      }
+      else
+      {
+          console.log("false");
+      }
+      console.log(bodyy);
+  }
+  init();
 // const USER_LS = "currentUser",
 //     SHOWING_CN = "showing";
 

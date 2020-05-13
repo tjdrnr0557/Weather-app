@@ -3,6 +3,10 @@ body {
   overflow-x: hidden;
 }
 
+.btn{
+  color:red;
+}
+
 h1{
   color: aliceblue;
 }
